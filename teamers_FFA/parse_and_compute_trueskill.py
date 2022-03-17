@@ -68,7 +68,7 @@ with open("report.txt") as rf:
             reset()
 
         if parsing_report:
-            if 'GameType' in line:
+            if 'gametype' in line.lower():
                 gametype = line.split(':')[1].strip().split(' ')[0].lower()
             if '@' in line:
                 ls = line.split(':')
