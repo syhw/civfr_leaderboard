@@ -7,6 +7,10 @@ This is a short script to parse a raw text dump (done with [DiscordChatExporter]
 CivFRMalm rating 22.8, Snippy rating 9.4, CivFRMalm vs. Snippy draw chance 0.24
 Lege rating 23.3, CivFRMalm rating 22.8, Lege vs. CivFRMalm draw chance 0.72
 ```
+* command used for the `DiscordChatExporter`: 
+```
+dotnet bin/Debug/net6.0/DiscordChatExporter.Cli.dll export -c 934946383566356582 -f PlainText
+```
 
 Quick hack provided under the:
 
