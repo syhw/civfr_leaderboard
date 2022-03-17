@@ -4,8 +4,8 @@ This is a short script to parse a raw text dump (done with [DiscordChatExporter]
 * `leaderboard_N.txt` gives the rankings for 10 random shuffling of the matches orders, to show you the variability in such a ranking.
 * If you look in the code, there is an example for how to use it for getting a probability of a balanced match:
 ```
-CivFRMalm rating 22.8, Snippy rating 9.4, CivFRMalm vs. Snippy draw chance 0.24
-Lege rating 23.3, CivFRMalm rating 22.8, Lege vs. CivFRMalm draw chance 0.72
+CivFRMalm rating 22.9, Snippy rating 9.4, CivFRMalm vs. Snippy draw chance 0.23
+Lege rating 23.1, CivFRMalm rating 22.9, Lege vs. CivFRMalm draw chance 0.72
 ```
 * command used for the `DiscordChatExporter`: 
 ```

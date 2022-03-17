@@ -14,7 +14,7 @@ with open("1v1.txt") as rf:
         line = line.replace('(CivFR)', 'CivFR')
         line = line.replace('The ', 'The')
         line = line.replace('Jack The', 'JackThe')
-        if 'victoire' in line and '@' in line:
+        if ('ictoire' in line or 'ictory' in line or ' win ' in line or ' vin ' in line) and '@' in line:
             ls = line.split('@')
             p1 = ls[1].split()[0].split('#')[0].split('(')[0]
             if len(ls) > 2:
@@ -22,9 +22,22 @@ with open("1v1.txt") as rf:
             else:
                 continue
             if len(ls) > 3:
-                print('This line mentions more than 2 players, splitting on "victoire"')
+                print('This line mentions more than 2 players, splitting on "ictoire"')
                 print(line)
-                ls = line.split('victoire')
+                ls = line.split('ictoire')
+                if len(ls) < 2:
+                    print("Failed")
+                    print('This line mentions more than 2 players, splitting on "ictory"')
+                    print(line)
+                    ls = line.split('ictory')
+                if len(ls) < 2:
+                    print("Failed")
+                    print('This line mentions more than 2 players, splitting on "win"')
+                    print(line)
+                    ls = line.split('win')
+                if len(ls) < 2:
+                    print("Failed")
+                    continue
                 left, right = ls[0], ls[1]
                 p1 = left.split('@')[-1].split()[0].split('#')[0].split('(')[0]
                 p2 = right.split('@')[-1].split()[0].split('#')[0].split('(')[0]
