@@ -1,3 +1,8 @@
+Number of lines where we found a message of victory: 629
+Number of matches counted: 627.
+Number of matches that were reported on 2 lines: 3
+
+=================
 alexis: 31.611662521042796
 M1oel: 27.795903033205086
 Titiits: 26.7727333778899
@@ -215,3 +220,8 @@ Matezzi75: -3.3322934204532526
 guigui: -3.5271635494184164
 El.Piero: -3.8531930462892703
 TheNSG: -4.077484789931013
+
+=================
+Example for how to use it for getting a probability of a balanced match:
+CivFRMalm rating 22.9, Snippy rating 9.4, CivFRMalm vs. Snippy draw chance 0.23
+Lege rating 23.1, CivFRMalm rating 22.9, Lege vs. CivFRMalm draw chance 0.72
