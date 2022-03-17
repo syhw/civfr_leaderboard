@@ -33,6 +33,7 @@ with open("report.txt") as rf:
         ### substitutions for some names
         line = line.replace('(CivFR)', 'CivFR')
         line = line.replace('The ', 'The')
+        line = line.replace('Jack The', 'JackThe')
         if 'ReportParser' in line:
             if parsing_report == True:
                 nbugs += 1
@@ -92,14 +93,15 @@ print(f'Number of matches counted: {len(matches)}.')
 print("\n=================")
 with open('leaderboard_global.txt', 'w') as wf:
     for player, rating in leaderboard:
-        wf.write(f'{player}: {env.expose(rating)}\n')
+        wf.write(f'{player}: {env.expose(rating):0.2f} ({rating.mu:0.2f}, {rating.sigma:0.2f})\n')
 players_list = [(k, v) for k, v in players_teamer.items()]
 leaderboard_teamer = sorted(players_list, key=lambda x: env.expose(x[1]), reverse=True)
 with open('leaderboard_teamer.txt', 'w') as wf:
     for player, rating in leaderboard_teamer:
-        wf.write(f'{player}: {env.expose(rating)}\n')
+        wf.write(f'{player}: {env.expose(rating):0.2f} ({rating.mu:0.2f}, {rating.sigma:0.2f})\n')
 players_list = [(k, v) for k, v in players_ffa.items()]
 leaderboard_ffa = sorted(players_list, key=lambda x: env.expose(x[1]), reverse=True)
 with open('leaderboard_ffa.txt', 'w') as wf:
     for player, rating in leaderboard_ffa:
-        wf.write(f'{player}: {env.expose(rating)}\n')
+        wf.write(f'{player}: {env.expose(rating):0.2f} ({rating.mu:0.2f}, {rating.sigma:0.2f})\n')
+
